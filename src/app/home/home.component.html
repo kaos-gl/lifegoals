@@ -1,0 +1,35 @@
+<div class="home-container">
+  
+  <div class="header-bar">
+    <div class="header-title">Add a life goal</div>
+    <div class="header-title">Your goal list ({{ metasLista.length }})</div>
+  </div>
+
+  <div class="content-row">
+    
+    <div class="form-section">
+      <p>Use this form below to add a new life goal</p>
+      <input 
+        type="text" 
+        [(ngModel)]="nuevaMetaTexto" 
+        placeholder="go to moon" 
+        class="goal-input"
+      >
+      <br>
+      <button (click)="agregarMeta()" class="btn-green">add an item</button>
+    </div>
+
+    <div class="list-section">
+      <div class="goals-container">
+        @for (item of metasLista; track item.id) {
+          <div class="goal-card">
+            <button (click)="eliminar(item.id)" class="btn-green">delete</button>
+            <p>{{ item.meta }}</p>
+          </div>
+        } @empty {
+          }
+      </div>
+    </div>
+    
+  </div>
+</div>

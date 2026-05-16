@@ -1,0 +1,13 @@
+.about-container {
+  /* Usamos el mismo azul que le pusiste a tu <nav> en styles.css */
+  background-color: #29b6f6; 
+  color: white;
+  padding: 2rem 4rem; /* Un padding más amplio para alinearlo bajo las opciones del menú */
+  min-height: calc(100vh - 76px); /* Cubre toda la pantalla restando el espacio del menú */
+  font-size: 1.3rem; /* Texto un poco más grande como en la captura */
+  font-weight: 300; /* Letra más delgada/limpia */
+}
+
+p {
+  margin: 0.3rem 0;
+}
